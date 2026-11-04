@@ -1,4 +1,4 @@
-name: GitHub Profile 3D Contributions
+name: 3D Contribution Skyline
 
 on:
   schedule:
@@ -14,17 +14,16 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      - name: Generate 3D contribution graph
-        uses: yoshi389111/github-profile-3d-contrib@latest
+      - name: Generate 3D skyline
+        run: node scripts/city.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-          SETTING_JSON: ./profile-3d-settings.json
       - name: Commit and push
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add profile-3d-contrib
-          if git commit -m "Update 3D contribution graph"; then
+          git add profile-3d-contrib/city.svg
+          if git commit -m "Update 3D contribution skyline"; then
             git push
           fi
