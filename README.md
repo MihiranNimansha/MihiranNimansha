@@ -12,21 +12,30 @@
 
 </div>
 
-## About
+---
 
-- BSc (Hons) in Artificial Intelligence and Data Science, Robert Gordon University (delivered at IIT Colombo)
-- Focused on data engineering: building the pipelines and platforms that turn raw data into decisions
-- Currently building JobPulse, a labour market intelligence platform, and leading LeafToPort, a team data science project
-- Active IEEE volunteer, organising events and supporting team collaboration
-- Goal: to grow into an AI engineer, combining finance domain knowledge with applied AI
+## 👨‍💻 About
 
-## Technical skills
+- BSc (Hons) AI & Data Science, Robert Gordon University (IIT Colombo)
+- Data engineering focus: turning raw data into decisions
+- Building **JobPulse**; leading **LeafToPort**
+- Active IEEE volunteer
+- Goal: AI engineer, blending finance and applied AI
 
-<p>
-  <img src="https://skillicons.dev/icons?i=py,ts,nodejs,java,r,nextjs,fastapi,postgres,mysql,redis,docker,githubactions,git&perline=13" alt="Tech stack" />
-</p>
+---
 
-## Featured projects
+## 🧰 Technical Skills
+
+| | |
+|---|---|
+| **Languages** | <img src="https://skillicons.dev/icons?i=py,ts,java,r&perline=4" alt="Languages" /> |
+| **Frameworks** | <img src="https://skillicons.dev/icons?i=nodejs,nextjs,fastapi&perline=3" alt="Frameworks" /> |
+| **Databases** | <img src="https://skillicons.dev/icons?i=postgres,mysql,redis&perline=3" alt="Databases" /> |
+| **DevOps and Tools** | <img src="https://skillicons.dev/icons?i=docker,githubactions,git&perline=3" alt="DevOps and tools" /> |
+
+---
+
+## 🚀 Featured Projects
 
 | Project | What it does | Built with |
 |---|---|---|
@@ -35,8 +44,10 @@
 | **VOLTRIX** | End-to-end ML pipeline predicting Bitcoin price movements from Binance data; I built the technical-indicator feature layer (team project) | Python, `ta`, Binance API |
 | **AI Incident Intelligence Platform** | Watches running apps, detects anomalies, forecasts load and explains incidents with an AI agent grounded in live telemetry | In progress |
 
-## Contribution activity
+---
+
+## 🏙️ Contribution Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/MihiranNimansha/MihiranNimansha/main/profile-3d-contrib/profile-customize.svg" alt="3D contribution graph" />
+  <img src="https://raw.githubusercontent.com/MihiranNimansha/MihiranNimansha/main/profile-3d-contrib/city.svg" alt="3D contribution skyline" width="100%" />
 </div>
