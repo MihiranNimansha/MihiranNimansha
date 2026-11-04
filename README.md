@@ -38,5 +38,5 @@
 ## 🏙️ Contribution graph
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/MihiranNimansha/MihiranNimansha/main/profile-3d-contrib/profile-green-animate.svg" alt="3D contribution graph" />
+  <img src="https://raw.githubusercontent.com/MihiranNimansha/MihiranNimansha/main/profile-3d-contrib/profile-customize.svg" alt="3D contribution graph" />
 </div>
