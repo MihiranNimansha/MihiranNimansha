@@ -1,7 +1,7 @@
 <div align="center">
 
 <a href="https://github.com/MihiranNimansha">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=2DD4BF&center=true&vCenter=true&width=700&lines=Hi%2C+I'm+Mihiran+%F0%9F%91%8B;AI+%26+Data+Science+Undergraduate;Aspiring+Data+%2F+AI+Engineer;Building+real+projects+from+Sri+Lanka" alt="Typing intro" />
+  <img src="https://readme-typing-svg.demolab.com?font=Arial&weight=500&size=24&pause=1200&color=2DD4BF&center=true&vCenter=true&width=700&lines=Mihiran+Nimansha;AI+%26+Data+Science+Undergraduate;Aspiring+Data+%2F+AI+Engineer;Building+real+projects+from+Sri+Lanka" alt="Typing intro" />
 </a>
 
 </div>
@@ -12,21 +12,21 @@
 
 </div>
 
-## 👨‍💻 About me
+## About
 
-- 🎓 BSc (Hons) AI & Data Science at **Robert Gordon University**, studying at **IIT Colombo**
-- 🛠️ I turn messy data into decisions people can act on, with a focus on **data engineering**
-- 🌱 Currently building **JobPulse** and leading **LeafToPort**, my team's data science group project
-- 🤝 Batch representative and active IEEE volunteer; I organise events and bring teams together
-- 🎯 Goal: grow into an AI engineer, combining finance domain knowledge with AI
+- BSc (Hons) in Artificial Intelligence and Data Science, Robert Gordon University (delivered at IIT Colombo)
+- Focused on data engineering: building the pipelines and platforms that turn raw data into decisions
+- Currently building JobPulse, a labour market intelligence platform, and leading LeafToPort, a team data science project
+- Active IEEE volunteer, organising events and supporting team collaboration
+- Goal: to grow into an AI engineer, combining finance domain knowledge with applied AI
 
-## 🧰 Tech stack
+## Technical skills
 
 <p>
   <img src="https://skillicons.dev/icons?i=py,ts,nodejs,java,r,nextjs,fastapi,postgres,mysql,redis,docker,githubactions,git&perline=13" alt="Tech stack" />
 </p>
 
-## 🚀 Featured projects
+## Featured projects
 
 | Project | What it does | Built with |
 |---|---|---|
@@ -35,7 +35,7 @@
 | **VOLTRIX** | End-to-end ML pipeline predicting Bitcoin price movements from Binance data; I built the technical-indicator feature layer (team project) | Python, `ta`, Binance API |
 | **AI Incident Intelligence Platform** | Watches running apps, detects anomalies, forecasts load and explains incidents with an AI agent grounded in live telemetry | In progress |
 
-## 🏙️ Contribution graph
+## Contribution activity
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/MihiranNimansha/MihiranNimansha/main/profile-3d-contrib/profile-customize.svg" alt="3D contribution graph" />
