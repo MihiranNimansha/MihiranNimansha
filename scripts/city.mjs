@@ -50,7 +50,7 @@ function sample() {
     }
     weeks.push(days);
   }
-  return { total, weeks };
+  return { total, weeks, radar: { commit: Math.round(total * 0.8), issue: 3, pr: 12, review: 4, repo: 6 } };
 }
 
 async function load() {
@@ -58,7 +58,7 @@ async function load() {
   const token = process.env.GITHUB_TOKEN;
   if (!token) throw new Error('GITHUB_TOKEN is required');
   const query =
-    'query($login:String!){user(login:$login){contributionsCollection{contributionCalendar{totalContributions weeks{contributionDays{date contributionCount weekday}}}}}}';
+    'query($login:String!){user(login:$login){contributionsCollection{totalCommitContributions totalIssueContributions totalPullRequestContributions totalPullRequestReviewContributions totalRepositoryContributions contributionCalendar{totalContributions weeks{contributionDays{date contributionCount weekday}}}}}}';
   const res = await fetch('https://api.github.com/graphql', {
     method: 'POST',
     headers: { Authorization: 'Bearer ' + token, 'Content-Type': 'application/json', 'User-Agent': 'city-graph' },
@@ -68,9 +68,17 @@ async function load() {
   if (!res.ok || json.errors || !json.data || !json.data.user) {
     throw new Error('GraphQL request failed: ' + JSON.stringify(json).slice(0, 500));
   }
-  const cal = json.data.user.contributionsCollection.contributionCalendar;
+  const cc = json.data.user.contributionsCollection;
+  const cal = cc.contributionCalendar;
   return {
     total: cal.totalContributions,
+    radar: {
+      commit: cc.totalCommitContributions,
+      issue: cc.totalIssueContributions,
+      pr: cc.totalPullRequestContributions,
+      review: cc.totalPullRequestReviewContributions,
+      repo: cc.totalRepositoryContributions,
+    },
     weeks: cal.weeks.map((w) =>
       w.contributionDays.map((d) => ({ date: d.date, count: d.contributionCount, weekday: d.weekday }))
     ),
@@ -128,7 +136,9 @@ out.push(
     '@keyframes tw{0%,100%{opacity:.15}50%{opacity:1}}' +
     '.bc{animation:bc 2.2s ease-in-out infinite}' +
     '@keyframes bc{0%,100%{opacity:.25}50%{opacity:1}}' +
-    '@media (prefers-reduced-motion:reduce){.b,.tw,.bc{animation:none}}' +
+    '.rd{transform-box:view-box;animation:rdin 1.6s cubic-bezier(.2,.8,.2,1) .8s both}' +
+    '@keyframes rdin{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}' +
+    '@media (prefers-reduced-motion:reduce){.b,.tw,.bc,.rd{animation:none}}' +
     '</style>'
 );
 out.push(
@@ -284,6 +294,47 @@ const first = all.reduce((a, d) => (d.date < a ? d.date : a), '9999');
 const last = all.reduce((a, d) => (d.date > a ? d.date : a), '0000');
 const nice = (s) => new Date(s + 'T00:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 out.push('<text x="' + PAD + '" y="' + (ly + 34) + '" fill="#6e7681" font-size="11">@' + esc(USER) + '  |  ' + nice(first) + ' to ' + nice(last) + '  |  public activity</text>');
+
+// radar (spider web) chart, bottom left
+const rd = cal.radar || { commit: 0, issue: 0, pr: 0, review: 0, repo: 0 };
+const axes = [['COMMITS', rd.commit], ['ISSUES', rd.issue], ['PULL REQUESTS', rd.pr], ['REVIEWS', rd.review], ['REPOS', rd.repo]];
+const RCX = PAD + 125;
+const RCY = H - 240;
+const RR = 82;
+const CAP = 500;
+function rp(k, frac, extra) {
+  const a = -Math.PI / 2 + (k * 2 * Math.PI) / 5;
+  const r = RR * frac + (extra || 0);
+  return [RCX + Math.cos(a) * r, RCY + Math.sin(a) * r];
+}
+out.push('<text x="' + PAD + '" y="' + (RCY - RR - 46) + '" fill="#8b949e" font-size="12" letter-spacing="1.2">ACTIVITY BREAKDOWN</text>');
+for (const ring of [0.25, 0.5, 0.75, 1]) {
+  const pts = [0, 1, 2, 3, 4].map((k) => pt(rp(k, ring))).join(' ');
+  out.push('<polygon points="' + pts + '" fill="none" stroke="#30363d" stroke-width="1"' + (ring < 1 ? ' stroke-dasharray="2 3"' : '') + '/>');
+}
+for (let k = 0; k < 5; k++) {
+  out.push('<line x1="' + f(RCX) + '" y1="' + f(RCY) + '" x2="' + pt(rp(k, 1)).split(',')[0] + '" y2="' + pt(rp(k, 1)).split(',')[1] + '" stroke="#30363d" stroke-width="1"/>');
+}
+const fr = axes.map((a) => Math.max(0.04, Math.min(1, Math.log10(1 + a[1]) / Math.log10(1 + CAP))));
+const shape = fr.map((v, k) => pt(rp(k, v))).join(' ');
+let rg = '<g class="rd" style="transform-origin:' + f(RCX) + 'px ' + f(RCY) + 'px">';
+rg += '<polygon points="' + shape + '" fill="#56d364" fill-opacity=".30" stroke="#56d364" stroke-opacity=".25" stroke-width="6" stroke-linejoin="round"/>';
+rg += '<polygon points="' + shape + '" fill="#56d364" fill-opacity=".22" stroke="#56d364" stroke-width="1.6" stroke-linejoin="round"/>';
+fr.forEach((v, k) => {
+  const p = rp(k, v);
+  rg += '<circle cx="' + f(p[0]) + '" cy="' + f(p[1]) + '" r="2.6" fill="#0d1117" stroke="#56d364" stroke-width="1.6"/>';
+});
+rg += '</g>';
+out.push(rg);
+axes.forEach((a, k) => {
+  const p = rp(k, 1, 14);
+  const anchor = k === 0 ? 'middle' : k === 1 || k === 2 ? 'start' : 'end';
+  const dy = k === 0 ? -4 : k === 2 || k === 3 ? 6 : 3;
+  out.push(
+    '<text x="' + f(p[0]) + '" y="' + f(p[1] + dy) + '" text-anchor="' + anchor + '" fill="#8b949e" font-size="10" letter-spacing=".8">' + a[0] +
+      ' <tspan fill="#56d364" font-weight="700">' + fmt(a[1]) + '</tspan></text>'
+  );
+});
 
 out.push('</svg>');
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
