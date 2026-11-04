@@ -49,5 +49,5 @@
 ## 🏙️ Contribution Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/MihiranNimansha/MihiranNimansha/main/profile-3d-contrib/city.svg?v=2" alt="3D contribution skyline" width="100%" />
+  <img src="https://raw.githubusercontent.com/MihiranNimansha/MihiranNimansha/main/profile-3d-contrib/city.svg?v=3" alt="3D contribution skyline" width="100%" />
 </div>
