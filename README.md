@@ -30,7 +30,7 @@
 | | |
 |---|---|
 | **Languages** | <img src="https://skillicons.dev/icons?i=py,ts,java&perline=3" alt="Languages" /> |
-| **Web and APIs** | <img src="https://skillicons.dev/icons?i=nodejs,react,nextjs,fastify,fastapi&perline=5" alt="Web and APIs" /> |
+| **Web and APIs** | <img src="https://skillicons.dev/icons?i=nodejs,react,nextjs,fastapi&perline=4" alt="Web and APIs" /> &nbsp; Fastify |
 | **Data** | <img src="https://skillicons.dev/icons?i=postgres,redis&perline=2" alt="Data" /> &nbsp; pgvector, BullMQ, Drizzle |
 | **DevOps and Cloud** | <img src="https://skillicons.dev/icons?i=docker,githubactions,git,aws&perline=4" alt="DevOps and cloud" /> |
 | **Learning next** | ![Airflow](https://img.shields.io/badge/Airflow-017CEE?style=flat&logo=apacheairflow&logoColor=white) ![dbt](https://img.shields.io/badge/dbt-FF694B?style=flat&logo=dbt&logoColor=white) ![Redpanda](https://img.shields.io/badge/Redpanda-E2401B?style=flat&logo=redpanda&logoColor=white) ![MLflow](https://img.shields.io/badge/MLflow-0194E2?style=flat&logo=mlflow&logoColor=white) |
