@@ -17,11 +17,12 @@
 
 ## 👋 About
 
-- 🌱 Preparing for the AWS Cloud Practitioner exam and the Coursera Machine Learning Specialization
-- 🤝 Team lead on a four-person group project, co-building an open-source tool with a teammate, volunteer with IEEE and the IIT Leo Club
-- 🎯 Looking for a data engineering or machine learning internship
-- 💬 Happy to talk about data pipelines, skill extraction and time-series forecasting
-- 🧭 Long term: AI engineer, with a finance angle
+- Preparing for the AWS Cloud Practitioner exam and the Coursera Machine Learning Specialization
+- Active IEEE member and volunteer
+- Interested in data pipelines and CI/CD for machine learning
+- Building practical data and machine learning projects
+- Looking for a data engineering or machine learning internship
+- Long-term goal: AI engineer, with a finance angle
 
 ---
 
