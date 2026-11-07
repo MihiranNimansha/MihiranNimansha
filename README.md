@@ -1,7 +1,7 @@
 <div align="center">
 
 <a href="https://github.com/MihiranNimansha">
-  <img src="https://readme-typing-svg.demolab.com?font=Arial&weight=500&size=24&pause=1200&color=2DD4BF&center=true&vCenter=true&width=700&lines=Mihiran+Nimansha;AI+%26+Data+Science+Undergraduate;Aspiring+Data+%2F+AI+Engineer;Building+real+projects+from+Sri+Lanka" alt="Typing intro" />
+  <img src="https://readme-typing-svg.demolab.com?font=Arial&weight=500&size=24&pause=1200&color=2DD4BF&center=true&vCenter=true&width=700&lines=Mihiran+Nimansha;Aspiring+Data+Engineer+%26+ML+Engineer;I+learn+by+building" alt="Typing intro" />
 </a>
 
 </div>
@@ -9,29 +9,31 @@
 <div align="center">
 
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mihirannimansha@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mihiran-samaraweera/)
 
 </div>
 
 ---
 
-## 👨‍💻 About
+## 👋 About
 
-- BSc (Hons) AI & Data Science, Robert Gordon University (IIT Colombo)
-- Data engineering focus: turning raw data into decisions
-- Building **JobPulse**; leading **LeafToPort**
-- Active IEEE volunteer
-- Goal: AI engineer, blending finance and applied AI
+- 🌱 Preparing for the AWS Cloud Practitioner exam and the Coursera Machine Learning Specialization
+- 🤝 Team lead on a four-person group project, co-building an open-source tool with a teammate, volunteer with IEEE and the IIT Leo Club
+- 🎯 Looking for a data engineering or machine learning internship
+- 💬 Happy to talk about data pipelines, skill extraction and time-series forecasting
+- 🧭 Long term: AI engineer, with a finance angle
 
 ---
 
-## 🧰 Technical Skills
+## 🧰 Tech Stack
 
 | | |
 |---|---|
-| **Languages** | <img src="https://skillicons.dev/icons?i=py,ts,java,r&perline=4" alt="Languages" /> |
-| **Frameworks** | <img src="https://skillicons.dev/icons?i=nodejs,nextjs,fastapi&perline=3" alt="Frameworks" /> |
-| **Databases** | <img src="https://skillicons.dev/icons?i=postgres,mysql,redis&perline=3" alt="Databases" /> |
-| **DevOps and Tools** | <img src="https://skillicons.dev/icons?i=docker,githubactions,git&perline=3" alt="DevOps and tools" /> |
+| **Languages** | <img src="https://skillicons.dev/icons?i=py,ts,java&perline=3" alt="Languages" /> |
+| **Web and APIs** | <img src="https://skillicons.dev/icons?i=nodejs,react,nextjs,fastify,fastapi&perline=5" alt="Web and APIs" /> |
+| **Data** | <img src="https://skillicons.dev/icons?i=postgres,redis&perline=2" alt="Data" /> &nbsp; pgvector, BullMQ, Drizzle |
+| **DevOps and Cloud** | <img src="https://skillicons.dev/icons?i=docker,githubactions,git,aws&perline=4" alt="DevOps and cloud" /> |
+| **Learning next** | ![Airflow](https://img.shields.io/badge/Airflow-017CEE?style=flat&logo=apacheairflow&logoColor=white) ![dbt](https://img.shields.io/badge/dbt-FF694B?style=flat&logo=dbt&logoColor=white) ![Redpanda](https://img.shields.io/badge/Redpanda-E2401B?style=flat&logo=redpanda&logoColor=white) ![MLflow](https://img.shields.io/badge/MLflow-0194E2?style=flat&logo=mlflow&logoColor=white) |
 
 ---
 
@@ -39,10 +41,10 @@
 
 | Project | What it does | Built with |
 |---|---|---|
-| **JobPulse** | Labour market intelligence for Sri Lanka's tech sector: collects job postings, extracts skills with NLP and serves a trends dashboard | TypeScript, Next.js, Fastify, FastAPI, PostgreSQL + pgvector, BullMQ |
+| **JobPulse** | Labour market intelligence for Sri Lanka's tech sector: collects public job postings, extracts the skills they ask for and shows demand trends on a dashboard | TypeScript, Next.js, Fastify, FastAPI, PostgreSQL + pgvector, BullMQ |
 | **LeafToPort** | Tea export decision support: auction price forecasting plus an international-event "what-if" price impact analyzer (team project, Team Leader) | Python, time-series forecasting |
-| **VOLTRIX** | End-to-end ML pipeline predicting Bitcoin price movements from Binance data; I built the technical-indicator feature layer (team project) | Python, `ta`, Binance API |
-| **AI Incident Intelligence Platform** | Watches running apps, detects anomalies, forecasts load and explains incidents with an AI agent grounded in live telemetry | In progress |
+| **VOLTRIX** | End-to-end ML pipeline predicting Bitcoin price movements from Binance data; I built the technical-indicator feature layer (team project) | Python, ta, Binance API |
+| **[Incident platform](https://github.com/Afshad-M/incidentPlatform)** | Open-source, self-hosted tool that watches running apps, detects anomalies and explains incidents with an AI agent grounded in live telemetry (in progress, built with a teammate) | Redpanda, dbt, Airflow, Docker |
 
 ---
 
